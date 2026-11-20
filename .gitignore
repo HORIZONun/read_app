@@ -1,0 +1,24 @@
+# Flutter/Dart
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# 平台目录由 flutter create 自动生成，不入库（保持纯净）
+/android/
+/ios/
+/web/
+/linux/
+/macos/
+/windows/
+
+# 系统/编辑器
+.DS_Store
+*.iml
+.idea/
+.vscode/
+
+# 密钥（不要提交）
+*.jks
+*.keystore
+key.properties

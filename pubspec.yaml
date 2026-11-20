@@ -1,0 +1,25 @@
+name: pure_reader
+description: 干净的本地阅读器 - 一个专注阅读的极简本地电子书阅读 App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 本地文件导入
+  file_picker: ^8.1.2
+  # 本地持久化（书库 + 进度）
+  shared_preferences: ^2.3.2
+  # 非 UTF-8 文本（GBK 等）解码
+  charset_converter: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
