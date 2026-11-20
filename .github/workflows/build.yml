@@ -17,11 +17,17 @@ jobs:
           channel: stable
           cache: true
 
-      # 工程不提交原生平台目录（保持纯净），由 Flutter 自动生成
+      - name: Debug - list files before
+        run: ls -la && echo "---" && cat pubspec.yaml | head -5
+
       - name: Generate Android platform files
         run: |
-          flutter create --platforms=android --overwrite .
-          ls -la android/ 2>&1 || echo "NO ANDROID DIR"
+          flutter create --platforms=android --overwrite . 2>&1
+          echo "CREATE_EXIT=$?"
+          echo "--- android dir ---"
+          ls -la android/ 2>&1
+          echo "--- app/src ---"
+          ls -R android/app/src 2>&1 | head -20
 
       - name: Install dependencies
         run: flutter pub get
